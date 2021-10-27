@@ -27,7 +27,7 @@ export const AuthProvider = (props) => {
   };
 
   /**
-   * Sets user to null
+   * Sets user to null (Logout)
    */
 
   const logoutUser = async () => {
@@ -60,7 +60,7 @@ export const AuthProvider = (props) => {
 
   /**
    * Retrieves the Magic Issues Bearer Token
-   * This allows ussers to make authenticated requests
+   * This allows users to make authenticated requests
    */
   const getToken = async () => {
     try {

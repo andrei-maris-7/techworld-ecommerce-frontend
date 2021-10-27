@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { useRouter } from "next/router";
 import { loadStripe } from "@stripe/stripe-js";
 
-import styles from "../styles/BuyButton.module.css";
+import { twoDecimals } from "../utils/format";
+
 import AuthContext from "../context/AuthContext";
 import { STRIPE_PK, API_URL } from "../utils/urls";
 
@@ -35,14 +36,24 @@ export default function BuyButton({ product }) {
       sessionId: session.id,
     });
   };
+
   return (
     <>
       {!user && (
-        <button className={styles.buy} onClick={redirectToLogin}>
-          Login to Buy
+        <button className={styles.buyButton} onClick={redirectToLogin}>
+          Pay ${twoDecimals(product.price)}
         </button>
       )}
-      {user && <button className={styles.buy} onClick={handleBuy}></button>}
+      {user && (
+        <button className={styles.buyButton} onClick={handleBuy}>
+          Pay ${twoDecimals(product.price)}
+        </button>
+      )}
     </>
   );
 }
+
+const styles = {
+  buyButton:
+    "w-full bg-gray-900 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-gray-500",
+};
