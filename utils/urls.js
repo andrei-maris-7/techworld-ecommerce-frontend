@@ -19,8 +19,12 @@ export const fromImageToUrl = (image) => {
     return "/vercel.svg";
   }
 
+  // if (image.url.indexOf("/" === 0)) {
+  //   return `${API_URL}${image.url}`;
+  // }
+
   if (image.url.indexOf("/" === 0)) {
-    return `${API_URL}${image.url}`;
+    return `${image.url}`;
   }
 
   return image.url;
