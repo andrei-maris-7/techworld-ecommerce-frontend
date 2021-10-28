@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { containerVariants } from "../animations";
 
 import AuthContext from "../context/AuthContext";
-import { API_URL } from "../utils/urls";
+import { fromImageToUrl, API_URL } from "../utils/urls";
 
 import {
   CheckCircleIcon,
@@ -110,7 +110,7 @@ export default function Orders() {
                             <a>
                               <img
                                 className="h-12 w-12 rounded shadow-md"
-                                src={`${API_URL}${order.product.image.url}`}
+                                src={fromImageToUrl(order.product.image)}
                                 alt=""
                               />
                             </a>
