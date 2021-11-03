@@ -4,7 +4,7 @@ import AuthContext from "../context/AuthContext";
 
 export default function Login() {
   const [email, setEmail] = useState("");
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, checkUserLoggedIn } = useContext(AuthContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();

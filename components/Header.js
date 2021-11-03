@@ -36,7 +36,6 @@ export default function Header() {
               <div className="flex items-center">
                 {user ? (
                   <div className="flex md:ml-4 md:flex-shrink-0 md:flex md:items-center">
-                    {/* Profile dropdown */}
                     <Menu as="div" className="ml-3 relative">
                       {({ open }) => (
                         <>

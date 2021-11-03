@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-// import Image from "next/image";
 
 import { motion } from "framer-motion";
 
@@ -48,7 +47,11 @@ export default function Home({ products }) {
 
           <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
             {products.map((product) => (
-              <Link key={product.name} href={`/products/${product.slug}`}>
+              <Link
+                key={product.name}
+                href={`/products/${product.slug}`}
+                scroll={false}
+              >
                 <a className="group">
                   <motion.div
                     className="w-full aspect-w-4 aspect-h-3 rounded-lg overflow-hidden"
@@ -92,5 +95,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-// We are receiving the products from getStaticProps because of Next.JS internal behaviour

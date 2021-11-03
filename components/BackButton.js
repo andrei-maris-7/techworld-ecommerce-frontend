@@ -1,15 +1,15 @@
-import { PlusIcon as PlusIconSolid } from "@heroicons/react/solid";
 import { ArrowLeftIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
 
 export default function BackButton() {
   const router = useRouter();
-  const isHome = router.pathname === "/";
 
   const goBack = (event) => {
     event.preventDefault();
+
     router.back();
   };
+
   return (
     <>
       <button

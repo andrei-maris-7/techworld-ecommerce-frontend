@@ -9,6 +9,7 @@ export const containerVariants = {
     transition: { delay: 0, duration: 0.5 },
   },
   exit: {
+    opacity: 0,
     x: "-100vw",
     transition: { ease: "easeInOut", duration: 1 },
   },

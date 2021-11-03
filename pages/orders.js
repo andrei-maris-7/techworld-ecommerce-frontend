@@ -1,19 +1,18 @@
-import Head from "next/head";
 import { useContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 import Link from "next/link";
-
-import { motion } from "framer-motion";
-import { containerVariants } from "../animations";
 
 import AuthContext from "../context/AuthContext";
 import { fromImageToUrl, API_URL } from "../utils/urls";
+
+import { motion } from "framer-motion";
+import { containerVariants } from "../animations";
 
 import {
   CheckCircleIcon,
   ChevronRightIcon,
   XCircleIcon,
-  MailIcon,
 } from "@heroicons/react/solid";
 
 import Heading from "../components/Heading";
@@ -106,7 +105,10 @@ export default function Orders() {
                     <div className="flex items-center px-4 py-4 sm:px-6">
                       <div className="min-w-0 flex-1 flex items-center">
                         <div className="flex-shrink-0">
-                          <Link href={`/products/${order.product.slug}`}>
+                          <Link
+                            href={`/products/${order.product.slug} `}
+                            scroll={false}
+                          >
                             <a>
                               <img
                                 className="h-12 w-12 rounded shadow-md"
@@ -118,7 +120,10 @@ export default function Orders() {
                         </div>
                         <div className="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
                           <div>
-                            <Link href={`/products/${order.product.slug}`}>
+                            <Link
+                              href={`/products/${order.product.slug}`}
+                              scroll={false}
+                            >
                               <a>
                                 <p className="text-sm font-medium text-black-700 truncate">
                                   {order.product.name}
@@ -129,7 +134,7 @@ export default function Orders() {
                               <span className="truncate">${order.total}</span>
                             </p>
                           </div>
-                          <div className="hidden md:block">
+                          <div className="md:block">
                             <div>
                               <p className="text-sm text-gray-900">
                                 Order placed on{" "}

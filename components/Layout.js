@@ -9,12 +9,7 @@ export default function Layout({ children }) {
     <div className="min-h-screen relative flex flex-col">
       <Header />
       <main className="mb-auto">{children}</main>
-
       {router.pathname !== "/login" && <Footer />}
     </div>
   );
 }
-
-// min-h-screen relative
-
-// non-footer page

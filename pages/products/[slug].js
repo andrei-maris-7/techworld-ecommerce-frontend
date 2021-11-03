@@ -1,11 +1,13 @@
 import Head from "next/head";
 import { fromImageToUrl, API_URL } from "../../utils/urls";
+import useScrollToTop from "../../utils/useScrollToTop";
+
 import BuyButton from "../../components/BuyButton";
 import BackButton from "../../components/BackButton";
 
-import Image from "next/image";
-
 const Product = ({ product }) => {
+  useScrollToTop();
+
   return (
     <>
       <Head>
@@ -87,12 +89,10 @@ export async function getStaticProps({ params: { slug } }) {
 
   return {
     props: {
-      product: found[0], // Because the API response for filters is an array
+      product: found[0],
     },
   };
 }
-
-// We are still using static site generation, but since there is a dynamic parameter (slug), we are going to tell Next.JS what paths to generate
 
 export async function getStaticPaths() {
   // Retrieve all the possible paths
