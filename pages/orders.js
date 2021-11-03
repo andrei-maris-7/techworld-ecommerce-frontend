@@ -39,7 +39,7 @@ const useOrders = (user, getToken) => {
       }
     };
     fetchOrders();
-  }, [user]); // everytime the user changes, we are going to fetch the orders again
+  }, [user]);
 
   return { orders, loading };
 };

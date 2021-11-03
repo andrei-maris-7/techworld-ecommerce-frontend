@@ -4,13 +4,9 @@ import Layout from "../components/Layout";
 import { containerVariants } from "../animations";
 import { motion, AnimatePresence } from "framer-motion";
 
-import useScrollRestoration from "../utils/useScrollRestoration";
-
 import { AuthProvider } from "../context/AuthContext";
 
 function MyApp({ Component, pageProps, router }) {
-  // useScrollRestoration(router);
-
   return (
     <AuthProvider>
       <Layout>

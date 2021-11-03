@@ -27,6 +27,7 @@
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "postcss": "^8.3.9",
+    "tailwind-scroll-behavior": "^1.0.0",
     "tailwindcss": "^2.2.17"
   }
 }
