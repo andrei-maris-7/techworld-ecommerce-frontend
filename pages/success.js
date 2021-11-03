@@ -43,8 +43,6 @@ export default function Success() {
 
   const { order, loading } = useOrder(session_id);
 
-  console.log(order);
-
   return (
     <div>
       <Head>

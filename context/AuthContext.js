@@ -51,7 +51,6 @@ export const AuthProvider = (props) => {
         // Testing
 
         const token = await getToken();
-        console.log("checkUserLoggedIn token", token);
       }
     } catch (err) {
       console.log(err);
