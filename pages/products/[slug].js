@@ -6,7 +6,7 @@ import BuyButton from "../../components/BuyButton";
 import BackButton from "../../components/BackButton";
 
 const Product = ({ product }) => {
-  useScrollToTop();
+  // useScrollToTop();
 
   return (
     <>
