@@ -20,12 +20,25 @@ export default function Header() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16">
               <div className="flex">
-                <div className="flex-shrink-0 flex items-center">
+                {/* Desktop */}
+                <div className="hidden sm:flex-shrink-0 sm:flex sm:items-center">
                   <Link href="/">
                     <a>
                       <img
-                        className="lg:block h-8 w-auto"
+                        className="lg:block h-12 w-auto"
                         src="/techworld.png"
+                        alt="Techworld"
+                      />
+                    </a>
+                  </Link>
+                </div>
+                {/* Mobile */}
+                <div className="flex-shrink-0 sm:hidden flex items-center">
+                  <Link href="/">
+                    <a>
+                      <img
+                        className="lg:block h-12 w-auto"
+                        src="/techworld-single.png"
                         alt="Techworld"
                       />
                     </a>
@@ -58,7 +71,7 @@ export default function Header() {
                           >
                             <Menu.Items
                               static
-                              className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                              className="origin-top-left absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                             >
                               <Menu.Item>
                                 {({ active }) => (
@@ -98,7 +111,7 @@ export default function Header() {
 
                     <div className="ml-2 mt-0.5 md:ml-4">
                       <p className="text-xs whitespace-nowrap  md:text-sm text-gray-500">
-                        <span className="text-gray-500 font-semibold">
+                        <span className="hidden sm:inline text-gray-500 font-semibold">
                           Logged in as:
                         </span>{" "}
                         <span className="text-xs md:text-sm">{user.email}</span>

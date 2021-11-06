@@ -58,7 +58,6 @@ export default function Orders() {
   }, []);
 
   const { orders, loading } = useOrders(user, getToken);
-  console.log("Account.render orders", orders);
 
   return (
     <>

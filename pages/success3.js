@@ -32,7 +32,7 @@ const useOrder = (session_id) => {
   return { order, loading };
 };
 
-export default function Success() {
+export default function Success3() {
   const router = useRouter();
   const { session_id } = router.query;
 

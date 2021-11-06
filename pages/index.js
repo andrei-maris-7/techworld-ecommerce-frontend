@@ -10,12 +10,12 @@ export default function Home({ products }) {
   return (
     <div>
       <Head>
-        <title>Homepage</title>
+        <title>Home</title>
         <meta name="description" content="Browse our digital products" />
       </Head>
 
       <main>
-        <div className="mt-24 mx-auto max-w-7xl px-4 sm:mt-32">
+        <div className="mt-12 mx-auto max-w-7xl px-4 sm:mt-32">
           <div className="text-center">
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
               <span className="block xl:inline">Browse our</span>{" "}
@@ -40,7 +40,7 @@ export default function Home({ products }) {
             </div>
           </div>
         </div>
-        <div className="max-w-2xl mx-auto pt-20 px-4 sm:pt-20 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="max-w-2xl mx-auto pt-10 px-4 sm:pt-20 sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 id="products-heading" className="sr-only">
             Products
           </h2>

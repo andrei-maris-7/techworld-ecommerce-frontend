@@ -19,7 +19,7 @@ export default function Login() {
       </Head>
 
       <section>
-        <div className="flex min-h-[93.2vh] overflow-hidden">
+        <div className="flex min-h-[90vh] sm:min-h-[93.2vh] overflow-hidden">
           <div className="flex flex-col justify-center flex-1 px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
             <div className="w-full max-w-xl mx-auto lg:w-96">
               {/* SIGN IN */}
