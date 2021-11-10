@@ -1,5 +1,4 @@
 import "tailwindcss/tailwind.css";
-import "../styles/globals.css";
 import Layout from "../components/Layout";
 
 import { containerVariants } from "../animations";

@@ -19,7 +19,7 @@ const Product = ({ product }) => {
       </Head>
 
       <div>
-        <main className="mx-auto pt-8 px-4 sm:pt-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <main className="mx-auto pt-8 px-4 sm:pt-12 sm:px-6 lg:max-w-7xl lg:px-8 2xl:pt-24">
           <BackButton />
 
           {/* Product */}
