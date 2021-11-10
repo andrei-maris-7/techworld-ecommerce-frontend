@@ -16,10 +16,6 @@ export default function Home({ products }) {
       <Head>
         <title>Home</title>
         <meta name="description" content="Browse our digital products" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter"
-          rel="stylesheet"
-        />
       </Head>
 
       <main>
