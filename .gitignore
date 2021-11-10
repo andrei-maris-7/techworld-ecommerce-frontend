@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# fonts
+
+/fonts
+globals.css
+
 # testing
 /coverage
 
@@ -19,7 +24,6 @@
 .DS_Store
 *.pem
 success3.js
-useScrollRestoration.js
 
 # debug
 npm-debug.log*
