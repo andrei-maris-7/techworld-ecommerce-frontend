@@ -1,12 +1,16 @@
 import Head from "next/head";
 import Link from "next/link";
 
+import useScrollToTop from "../utils/useScrollToTop";
+
 import { motion } from "framer-motion";
 
 import { fromImageToUrl, API_URL } from "../utils/urls";
 import { twoDecimals } from "../utils/format";
 
 export default function Home({ products }) {
+  useScrollToTop();
+
   return (
     <div>
       <Head>
@@ -40,7 +44,7 @@ export default function Home({ products }) {
             </div>
           </div>
         </div>
-        <div className="max-w-2xl mx-auto pt-10 px-4 sm:pt-20 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="max-w-2xl mx-auto pt-10 px-4 sm:pt-16 sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 id="products-heading" className="sr-only">
             Products
           </h2>

@@ -35,7 +35,7 @@ const Product = ({ product }) => {
             </div>
 
             {/* Product details */}
-            <div className="max-w-2xl mx-auto mt-14 sm:mt-16 lg:max-w-none lg:mt-0 lg:col-span-3">
+            <div className="max-w-2xl mx-auto mt-6 sm:mt-16 lg:max-w-none lg:mt-0 lg:col-span-3">
               <div className="flex flex-col-reverse">
                 <div>
                   <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
@@ -48,7 +48,7 @@ const Product = ({ product }) => {
                 </div>
               </div>
 
-              <p className="text-gray-500 mt-6">{product.content}</p>
+              <p className="text-gray-500 mt-4">{product.content}</p>
 
               <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
                 <BuyButton product={product} />

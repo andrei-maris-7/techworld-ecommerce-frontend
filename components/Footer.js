@@ -4,7 +4,7 @@ import { containerVariants } from "../animations";
 export default function Footer() {
   return (
     <motion.div
-      className="mt-auto lg:w-[70vw] max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8"
+      className="mt-auto lg:w-[70vw] max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-12 lg:px-8"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

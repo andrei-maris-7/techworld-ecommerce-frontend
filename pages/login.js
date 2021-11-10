@@ -1,10 +1,21 @@
 import Head from "next/head";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
+import { useRouter } from "next/router";
 
 export default function Login() {
   const [email, setEmail] = useState("");
-  const { loginUser, checkUserLoggedIn } = useContext(AuthContext);
+  const { user, loginUser } = useContext(AuthContext);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        router.push("/");
+      });
+    }
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();

@@ -9,6 +9,8 @@ let magic;
 
 export const AuthProvider = (props) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   const router = useRouter();
 
   /**
@@ -44,14 +46,15 @@ export const AuthProvider = (props) => {
     try {
       const isLoggedin = await magic.user.isLoggedIn();
 
+      if (!isLoggedin) setLoading(false);
+
       if (isLoggedin) {
         const { email } = await magic.user.getMetadata();
         setUser({ email });
-
-        // Testing
-
-        const token = await getToken();
+        setLoading(false);
       }
+
+      return isLoggedin;
     } catch (err) {
       console.log(err);
     }
@@ -59,7 +62,7 @@ export const AuthProvider = (props) => {
 
   /**
    * Retrieves the Magic Issues Bearer Token
-   * This allows users to make authenticated requests
+   * Allows users to make authenticated requests
    */
   const getToken = async () => {
     try {
@@ -70,12 +73,22 @@ export const AuthProvider = (props) => {
 
   useEffect(() => {
     magic = new Magic(MAGIC_PUBLIC_KEY);
+    console.log(magic);
 
     checkUserLoggedIn();
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, loginUser, logoutUser, getToken }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        loginUser,
+        logoutUser,
+        getToken,
+        checkUserLoggedIn,
+        loading,
+      }}
+    >
       {props.children}
     </AuthContext.Provider>
   );
