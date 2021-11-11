@@ -65,8 +65,6 @@ export default function Home({ products }) {
                     <img
                       src={fromImageToUrl(product.image)}
                       className="w-full h-full object-center object-cover group-hover:opacity-75"
-                      // layout="fill"
-                      // priority={true}
                     />
                   </motion.div>
 

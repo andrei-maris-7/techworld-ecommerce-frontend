@@ -61,7 +61,7 @@ export const AuthProvider = (props) => {
   };
 
   /**
-   * Retrieves the Magic Issues Bearer Token
+   * Retrieves the Magic issued Bearer Token
    * Allows users to make authenticated requests
    */
   const getToken = async () => {
